@@ -130,7 +130,7 @@ class HBNBCommand(cmd.Cmd):
                             if hasattr(obj, comds[2]):
                                 value = type(
                                     getattr(obj, comds[2]))(value)
-                                #  (i.e) int(comds[3]) 
+                                #  (i.e) int(comds[3])
                             elif value.isdigit() is True:
                                 value = int(value)
                             setattr(obj, comds[2], value)
@@ -155,6 +155,16 @@ class HBNBCommand(cmd.Cmd):
                 elif key[0] == args:
                     list_instances.append(str(instances[key_id]))
             print(list_instances)
+
+    def do_count(self, arg):
+        """
+        """
+        No_count = 0
+        all_objs = storage.all()
+        for key, obj in all_objs.items():
+            if arg in obj.__str__():
+                No_count += 1
+        print(No_count)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()

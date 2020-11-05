@@ -54,3 +54,4 @@ class BaseModel():
         dic2["__class__"] = self.__class__.__name__
 
         return dic2
+
