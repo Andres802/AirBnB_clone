@@ -173,7 +173,7 @@ class HBNBCommand(cmd.Cmd):
             if args[1] in No_commands:
                 No_commands[args[1]](args[0])
 
-    def do_count(self, args):
+    def do_count(self, arg):
         """
         to retrieve the number of instances of a class: <class name>.count().
         """
