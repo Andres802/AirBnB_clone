@@ -156,15 +156,16 @@ class HBNBCommand(cmd.Cmd):
                     list_instances.append(str(instances[key_id]))
             print(list_instances)
 
-    def do_count(self, arg):
+    def do_count(self, args):
         """
+        Count instances
         """
-        No_count = 0
+        None_count = 0
         all_objs = storage.all()
         for key, obj in all_objs.items():
             if arg in obj.__str__():
-                No_count += 1
-        print(No_count)
+                None_count += 1
+        print(None_count)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
