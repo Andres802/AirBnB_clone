@@ -74,7 +74,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, args):
         """ Destroy an instance.
-        Usage 🛠:
+        Usage :
         1 - destroy <class> <id>
         2 - <class name>.destroy("<id>")
         """
@@ -96,7 +96,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, args):
         """update an instance.
-        Usage 🛠:
+        Usage :
         1 - update <class name> <id> <attribute name> "<attribute value>
         2 - <class name>.update(<id>, <attribute name>, <attribute value>)
         3 - <class name>.update(<id>, <dictionary representation>)
@@ -122,7 +122,7 @@ class HBNBCommand(cmd.Cmd):
                     for key_id, obj in instances.items():
                         if key == key_id:
                             value = comds[3].split("\"")
-                            # (i.e) evalue if value turns into list 🔐
+                            # (i.e) evalue if value turns into list
                             if len(value) > 1:
                                 value = value[1]
                             else:
@@ -130,7 +130,7 @@ class HBNBCommand(cmd.Cmd):
                             if hasattr(obj, comds[2]):
                                 value = type(
                                     getattr(obj, comds[2]))(value)
-                                #  (i.e) int(comds[3]) 🔐
+                                #  (i.e) int(comds[3]) 
                             elif value.isdigit() is True:
                                 value = int(value)
                             setattr(obj, comds[2], value)
