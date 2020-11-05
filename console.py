@@ -158,6 +158,7 @@ class HBNBCommand(cmd.Cmd):
 
     def default(self, line):
         """
+        Retrieve all instances of a class by using: <class name>.all().
         """
         if '.' not in line:
             print("*** Unknown syntax: " + line)
@@ -174,7 +175,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_count(self, args):
         """
-        Count instances
+        to retrieve the number of instances of a class: <class name>.count().
         """
         None_count = 0
         all_objs = storage.all()
