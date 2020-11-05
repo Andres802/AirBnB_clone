@@ -156,6 +156,22 @@ class HBNBCommand(cmd.Cmd):
                     list_instances.append(str(instances[key_id]))
             print(list_instances)
 
+    def default(self, line):
+        """
+        """
+        if not '.' in line:
+            print("*** Unknown syntax: " + line)
+            return
+        No_commands = {"all()": self.do_all, "count()": self.do_count}
+        args = line.split(".")
+        if args[0] not in self.classes_list:
+            print("*** Unknown syntax: " + line)
+        elif len(args) != 2:
+            print("*** Unknown syntax: " + line)
+        else:
+            if args[1] in No_commands:
+                No_commands[args[1]](args[0])
+
     def do_count(self, args):
         """
         Count instances
