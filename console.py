@@ -159,7 +159,7 @@ class HBNBCommand(cmd.Cmd):
     def default(self, line):
         """
         """
-        if not '.' in line:
+        if '.' not in line:
             print("*** Unknown syntax: " + line)
             return
         No_commands = {"all()": self.do_all, "count()": self.do_count}
