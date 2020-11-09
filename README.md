@@ -197,7 +197,7 @@ AirBnB_clone$ echo "show User 55b76419-6009-4b36-b88a-7c2930283f4a" | ./console.
 
 ## Authors ✏️
 
-- [Andres Barrera Software Engineering student at [Holberton School](https://www.holbertonschool.com/co)
+- [Andres Barrera] Software Engineering student at [Holberton School](https://www.holbertonschool.com/co)
 - [Laura Castillo] - Software Engineering student at [Holberton School](https://www.holbertonschool.com/co)
 
  ```
