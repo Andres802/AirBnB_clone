@@ -56,3 +56,16 @@ class BaseModel():
         dic2["__class__"] = self.__class__.__name__
 
         return dic2
+
+    def reload(self):
+        """ deserialize the file json
+        with load y and returns to make
+        a update with all objects
+        """
+        filename = FileStorage.__file_path
+        if path.exists(filename):
+            with open(filename, "r") as f:
+                load = json.load(f)
+            for k, v in load.items():
+                suma = eval(v["__class__"])(**v)
+                FileStorage.__objects[k] = suma
