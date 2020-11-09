@@ -5,6 +5,7 @@ from datetime import datetime
 import models
 format = '%Y-%m-%dT%H:%M:%S.%f'
 
+
 class BaseModel():
     """class defines all common attributes/methods and the
     assign various atributes principal
@@ -18,14 +19,14 @@ class BaseModel():
         each key of this dictionary is an attribute name
         each value of this dictionary is the value of this attribute name
         '''
-       if kwargs:
-            for key, value in kwargs.items():
-                if key == 'created_at' or key == 'updated_at':
-                    setattr(self, key, datetime.strptime(value, format))
-                elif key == '__class__':
-                    pass
-                else:
-                    setattr(self, key, value)
+        if kwargs:
+            for k, v in kwargs.items():
+                if k != "__class__":
+                    setattr(self, k, v)
+                if k == "created_at" or k == "updated_at":
+                    form = '%Y-%m-%dT%H:%M:%S.%f'
+                    setattr(self, k, datetime.datetime.strptime(v, form))
+
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
