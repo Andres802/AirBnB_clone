@@ -53,7 +53,7 @@
 
 ## Description  📄
 
- The AirBnB console project. is just a piece of the AirBnB clone of Holberton School, is about to make a command interpreter that perform operations, all this as part of foundations program of cohort 11, It's completely made in Python 3 programming language and implement unittest library to make the project stable and more reliable.
+ The AirBnB console project. is just a piece of the AirBnB clone of Holberton School, is about to make a command interpreter that perform operations, all this as part of foundations program of cohort 12, It's completely made in Python 3 programming language and implement unittest library to make the project stable and more reliable.
 
 
 ## ¿What is a hbnb interpreter?  💻
